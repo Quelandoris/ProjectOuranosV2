@@ -10,6 +10,8 @@
     <sprite>sprites\PlayerTest_sp</sprite>
     <sprite>sprites\WallTest_sp</sprite>
     <sprite>sprites\EnemyTest_sp</sprite>
+    <sprite>sprites\SwordTest_sp</sprite>
+    <sprite>sprites\BowTest</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

@@ -56,12 +56,12 @@ Inv[3]=""; //Misc
             <string>///Draw UI sprites for the Inventory Slots
 
 //Hand Slots
-draw_sprite(InventoryBox_sp,0,20,20);
-draw_sprite(InventoryBox_sp,0,140,20);
+draw_sprite(InventoryBox_sp,0,10,10);
+draw_sprite(InventoryBox_sp,0,90,10);
 //Armor Slot
-draw_sprite(InventoryBox_sp,0,260,20);
+draw_sprite(InventoryBox_sp,0,170,10);
 //Misc Slot
-draw_sprite(InventoryBox_sp,0,380,20);
+draw_sprite(InventoryBox_sp,0,250,10);
 </string>
           </argument>
         </arguments>

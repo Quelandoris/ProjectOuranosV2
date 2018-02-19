@@ -40,6 +40,11 @@ PlayerCurVertSpeed=0; //How fast is the player currently moving vertically.
 PlayerMaxVertSpeed=7; //bottom limit on vertical movement speed; The peak speed during a fall.
 //Probably don't need this in hindsight PlayerMinVertSpeed=-10;  //Upper limit on vertical movement speed; The peak speed during a jump.
 
+//create own inventory
+Inv = instance_create(x,y,Inventory_ob);
+
+//DebugMode
+debugMode=false;
 </string>
           </argument>
         </arguments>
@@ -123,6 +128,39 @@ PlayerMaxVertSpeed=7; //bottom limit on vertical movement speed; The peak speed 
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debug Commands
+
+//Enable Debug Mode
+if(keyboard_check(vk_shift) &amp;&amp; keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(vk_pagedown)){
+    debugMode=true;
+    show_debug_message("Debug Mode Enabled");
+}
+
+if(debugMode){
+    if(keyboard_check_pressed(ord("I"))){
+        ItemGenerationScript(6,10,true);
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
