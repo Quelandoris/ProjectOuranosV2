@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,43 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Inventory Array
-Inv="";
-Inv[0]=""; //Hand 1
-Inv[1]=""; //Hand 2
-Inv[2]=""; //Armor
-Inv[3]=""; //Misc
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw UI sprites for the Inventory Slots
-
-//Hand Slots
-draw_sprite(InventoryHand1_sp,0,10,10);
-draw_sprite(InventoryHand2_sp,0,90,10);
-//Armor Slot
-draw_sprite(InventoryArmor_sp,0,170,10);
-//Misc Slot
-draw_sprite(InventoryTrinket_sp,0,250,10);
+            <string>x=Player_ob.x;
+y=Player_ob.y-70;
 </string>
           </argument>
         </arguments>

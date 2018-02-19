@@ -6,12 +6,24 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\KeyboardZ_sp</sprite>
+    <sprite>sprites\KeyboardC_sp</sprite>
+    <sprite>sprites\KeyboardX_sp</sprite>
     <sprite>sprites\InventoryBox_sp</sprite>
     <sprite>sprites\PlayerTest_sp</sprite>
+    <sprite>sprites\KeyboardC_sp_HighRez</sprite>
+    <sprite>sprites\KeyboardX_sp_HighRez</sprite>
+    <sprite>sprites\KeyboardZ_sp_HighRez</sprite>
     <sprite>sprites\WallTest_sp</sprite>
     <sprite>sprites\EnemyTest_sp</sprite>
     <sprite>sprites\SwordTest_sp</sprite>
     <sprite>sprites\BowTest</sprite>
+    <sprites name="Inventory">
+      <sprite>sprites\InventoryHand1_sp</sprite>
+      <sprite>sprites\InventoryHand2_sp</sprite>
+      <sprite>sprites\InventoryArmor_sp</sprite>
+      <sprite>sprites\InventoryTrinket_sp</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,6 +39,9 @@
     <script>scripts\PlayerControlsScriptKeyboard.gml</script>
     <script>scripts\PlayerGravity.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\Bodoni_ft</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
     <object>objects\Weapon_ob</object>
@@ -37,6 +52,7 @@
     <object>objects\Item_ob</object>
     <object>objects\Player_ob</object>
     <object>objects\Sword_ob</object>
+    <object>objects\Camerapoint_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom1_rm</room>

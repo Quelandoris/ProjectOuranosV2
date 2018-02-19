@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,6 +27,103 @@
             <kind>1</kind>
             <string>///Variables all items regardless of type share
 ILvl=0; //The level of the item
+PlayerNear=false; //When player is nearby, this should turn true, and enable drawing gui resources
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///If player is nearby, enable GuiDrawing of Sprite Interface for swapping items.
+
+if(distance_to_object(Player_ob)&lt;10){
+    PlayerNear=true;
+}
+else{
+    PlayerNear=false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw the text for an item when player is nearby
+draw_self();
+
+if(PlayerNear){
+    //Draw a button prompt &amp; stat information for the weapon
+    draw_sprite(KeyboardC_sp,0,x,y-50);
+    draw_set_colour(c_black);
+    draw_rectangle(x-50,y-67,x+50,y-120,false);
+    draw_set_colour(c_white);
+    draw_set_font(Bodoni_ft);
+    draw_set_halign(fa_center);
+    //Find what kind of item it is
+    if(object_get_parent(object_index)==Weapon_ob){
+        //Determine name of object, truncated with Item Level
+        if(object_index==Sword_ob){
+            draw_text(x,y-120,"Sword +" + string(ILvl));
+        }
+        else if(object_index==Bow_ob){
+            draw_text(x,y-120,"Bow +" + string(ILvl));
+        }
+        //Attack Power
+        draw_text(x,y-110,"Attack Power: " + string(AtkPower));
+        //Attack rate
+        draw_text(x,y-100, "Attack rate: " + string(AtkRate));
+        //Misc effects. Only show effects the player actually has, and dont repeat. Currently should be capped to only showing 3 effects, since there are only 3 effects.
+        var SunderUsed=false;
+        var KnockbackUsed=false;
+        var AtkBurnUsed=false;
+        for(i=1 ; i&lt;3 ; i++){
+            if(Sunder&gt;0 &amp;&amp; !SunderUsed){
+                SunderUsed=true;
+                draw_text(x,y-(100-(i*10)),"Sunder: " + string(Sunder) + "%");
+            }
+            else if(Knockback&gt;0 &amp;&amp; !KnockbackUsed){
+                KnockbackUsed=true;
+                draw_text(x,y-(100-(i*10)),"Knockback: " + string(Knockback) + "lbs");
+            }
+            else if(AtkBurn&gt;0 &amp;&amp; !AtkBurnUsed){
+                AtkBurnUsed=true;
+                draw_text(x,y-(100-(i*10)),"Burn: " + string(AtkBurn) + "%");
+            }
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
