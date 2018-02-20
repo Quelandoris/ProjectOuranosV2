@@ -48,6 +48,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
+    <font>fonts\BodoniBig_ft</font>
   </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
