@@ -64,7 +64,7 @@ if(enemy!=noone){
     enemy.HP-=self.AtkPower;
 }*/
 if(place_meeting(x,y,EnemyParent_ob)){
-    var thisone = place_meeting(x,y,EnemyParent_ob);
+    thisone = place_meeting(x,y,EnemyParent_ob);
     thisone.HP-=AtkPower;
     instance_create(thisone.x,thisone.y,DmgText_ob);
 }
