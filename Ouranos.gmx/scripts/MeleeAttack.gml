@@ -16,7 +16,6 @@ var Hitbox = instance_create(x+(sprite_width/2)+1,y,Hitbox_ob);
 //Assign basic values
 Hitbox.AtkPower = atkPower;
 Hitbox.image_xscale=atkLength;
-//Hitbox.
 //assign Passive values
 Hitbox.Sunder=sunder;
 Hitbox.Knockback=knockback;
