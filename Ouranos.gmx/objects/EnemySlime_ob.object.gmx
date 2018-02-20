@@ -26,11 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>///Setup Values
-enum State{Passive, Agro, Dead};
+enum State{Passive, Aggro, Dead};
 EnemyState = State.Passive;
 EnemyCanJump = false; // Can the enemy currently jump? Reset on ground.
-EnemyGrav = 0.3; //Speed at which the enemy will fall;
-EnemyXStart = x;
+EnemyGrav = 2; //Speed at which the enemy will fall;
+EnemyXStart = x; //Starting X for the enemy
+EnemyJumpForce = 30; //Controls jump height
+EnemyCurVertSpeed = 0; //How fast the enemy is currently moving vertically
+EnemyTimer = 0;
+EnemyMoveRight = 0
+EnemyMoveLeft = 0
+
+
 
 
 </string>

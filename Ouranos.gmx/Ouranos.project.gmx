@@ -14,9 +14,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\SlimeDead.gml</script>
-    <script>scripts\SlimeMain.gml</script>
-    <script>scripts\SlimePassive.gml</script>
     <script>scripts\ItemGenerationScript.gml</script>
     <script>scripts\MoveJump.gml</script>
     <script>scripts\MoveLeft.gml</script>
@@ -24,6 +21,12 @@
     <script>scripts\MoveStop.gml</script>
     <script>scripts\PlayerControlsScriptKeyboard.gml</script>
     <script>scripts\PlayerGravity.gml</script>
+    <scripts name="Enemy">
+      <script>scripts\SlimeDead.gml</script>
+      <script>scripts\SlimePassive.gml</script>
+      <script>scripts\SlimeMain.gml</script>
+      <script>scripts\SlimeAggro.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
