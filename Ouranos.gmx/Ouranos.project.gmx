@@ -62,6 +62,7 @@
     <object>objects\EnemyParent_ob</object>
     <object>objects\EnemySlime_ob</object>
     <object>objects\Hitbox_ob</object>
+    <object>objects\DmgText_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>
