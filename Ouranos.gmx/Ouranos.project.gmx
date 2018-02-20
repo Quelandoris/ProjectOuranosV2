@@ -46,6 +46,9 @@
     </scripts>
     <script>scripts\MeleeAttack.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\Bodoni_ft</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
     <object>objects\TestDummy_ob</object>
