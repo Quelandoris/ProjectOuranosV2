@@ -44,6 +44,7 @@
       <script>scripts\SlimeMain.gml</script>
       <script>scripts\SlimeAggro.gml</script>
     </scripts>
+    <script>scripts\MeleeAttack.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
