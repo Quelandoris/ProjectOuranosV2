@@ -15,6 +15,7 @@
     <sprite>sprites\KeyboardX_sp_HighRez</sprite>
     <sprite>sprites\KeyboardZ_sp_HighRez</sprite>
     <sprite>sprites\WallTest_sp</sprite>
+    <sprite>sprites\EnemySlime_sp</sprite>
     <sprite>sprites\EnemyTest_sp</sprite>
     <sprite>sprites\SwordTest_sp</sprite>
     <sprite>sprites\BowTest</sprite>
@@ -30,9 +31,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\SlimeDead.gml</script>
-    <script>scripts\SlimeMain.gml</script>
-    <script>scripts\SlimePassive.gml</script>
     <script>scripts\ItemGenerationScript.gml</script>
     <script>scripts\MoveJump.gml</script>
     <script>scripts\MoveLeft.gml</script>
@@ -40,7 +38,12 @@
     <script>scripts\MoveStop.gml</script>
     <script>scripts\PlayerControlsScriptKeyboard.gml</script>
     <script>scripts\PlayerGravity.gml</script>
-    <script>scripts\MeleeAttack.gml</script>
+    <scripts name="Enemy">
+      <script>scripts\SlimeDead.gml</script>
+      <script>scripts\SlimePassive.gml</script>
+      <script>scripts\SlimeMain.gml</script>
+      <script>scripts\SlimeAggro.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
@@ -61,7 +64,7 @@
     <object>objects\DmgText_ob</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\TestRoom1_rm</room>
+    <room>rooms\TestRoom2_rm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
