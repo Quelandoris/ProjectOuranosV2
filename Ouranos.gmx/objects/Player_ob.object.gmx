@@ -68,8 +68,8 @@ randomize();
           <argument>
             <kind>1</kind>
             <string>///Views control
-cam = instance_create(x,y,Camerapoint_ob);
-view_object[0]=cam;
+//cam = instance_create(x,y,Camerapoint_ob);
+//view_object[0]=cam;
 </string>
           </argument>
         </arguments>

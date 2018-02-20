@@ -44,10 +44,8 @@
       <script>scripts\SlimeMain.gml</script>
       <script>scripts\SlimeAggro.gml</script>
     </scripts>
+    <script>scripts\MeleeAttack.gml</script>
   </scripts>
-  <fonts name="fonts">
-    <font>fonts\Bodoni_ft</font>
-  </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
     <object>objects\TestDummy_ob</object>
@@ -59,9 +57,7 @@
     <object>objects\Weapon_ob</object>
     <object>objects\EnemyParent_ob</object>
     <object>objects\EnemySlime_ob</object>
-    <object>objects\Camerapoint_ob</object>
     <object>objects\Hitbox_ob</object>
-    <object>objects\DmgText_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>
