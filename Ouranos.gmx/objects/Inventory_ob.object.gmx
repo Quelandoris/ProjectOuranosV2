@@ -55,13 +55,31 @@ Inv[3]=""; //Misc
             <kind>1</kind>
             <string>///Draw UI sprites for the Inventory Slots
 
+// Add 20 to X and 10 to Y to center sprites in the inventory frame. 
+//Use stretched with proportional values to the original sprite
 //Hand Slots
-draw_sprite(InventoryBox_sp,0,20,20);
-draw_sprite(InventoryBox_sp,0,140,20);
+draw_sprite(InventoryHand1_sp,0,10,10);
+//if item is in slot, draw its sprite inside the inventory box
+if(Inv[0]!=""){
+    draw_sprite_stretched(Inv[0].sprite_index,0,30,20,20,40);
+}
+draw_sprite(InventoryHand2_sp,0,90,10);
+//if item is in slot, draw its sprite inside the inventory box
+if(Inv[1]!=""){
+    draw_sprite_stretched(Inv[1].sprite_index,0,110,20,20,40);
+}
 //Armor Slot
-draw_sprite(InventoryBox_sp,0,260,20);
+draw_sprite(InventoryArmor_sp,0,170,10);
+//if item is in slot, draw its sprite inside the inventory box
+if(Inv[2]!=""){
+    draw_sprite_stretched(Inv[2].sprite_index,0,190,20,40,40);
+}
 //Misc Slot
-draw_sprite(InventoryBox_sp,0,380,20);
+draw_sprite(InventoryTrinket_sp,0,250,10);
+//if item is in slot, draw its sprite inside the inventory box
+if(Inv[3]!=""){
+    draw_sprite_stretched(Inv[3].sprite_index,0,270,20,40,40);
+}
 </string>
           </argument>
         </arguments>
