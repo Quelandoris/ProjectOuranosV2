@@ -24,6 +24,8 @@
       <sprite>sprites\InventoryArmor_sp</sprite>
       <sprite>sprites\InventoryTrinket_sp</sprite>
     </sprites>
+    <sprite>sprites\TestDummy_sp</sprite>
+    <sprite>sprites\hitbox_sp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -38,21 +40,25 @@
     <script>scripts\MoveStop.gml</script>
     <script>scripts\PlayerControlsScriptKeyboard.gml</script>
     <script>scripts\PlayerGravity.gml</script>
+    <script>scripts\MeleeAttack.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
   </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
-    <object>objects\Weapon_ob</object>
     <object>objects\Bow_ob</object>
+    <object>objects\Sword_ob</object>
+    <object>objects\Player_ob</object>
+    <object>objects\Item_ob</object>
+    <object>objects\Inventory_ob</object>
+    <object>objects\Weapon_ob</object>
     <object>objects\EnemyParent_ob</object>
     <object>objects\EnemySlime_ob</object>
-    <object>objects\Inventory_ob</object>
-    <object>objects\Item_ob</object>
-    <object>objects\Player_ob</object>
-    <object>objects\Sword_ob</object>
     <object>objects\Camerapoint_ob</object>
+    <object>objects\TestDummy_ob</object>
+    <object>objects\Hitbox_ob</object>
+    <object>objects\DmgText_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom1_rm</room>
