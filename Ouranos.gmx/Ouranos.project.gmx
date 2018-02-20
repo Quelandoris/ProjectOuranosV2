@@ -51,6 +51,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
+    <object>objects\EnemyParent_ob</object>
     <object>objects\TestDummy_ob</object>
     <object>objects\Bow_ob</object>
     <object>objects\Sword_ob</object>
@@ -58,8 +59,10 @@
     <object>objects\Item_ob</object>
     <object>objects\Inventory_ob</object>
     <object>objects\Weapon_ob</object>
-    <object>objects\EnemyParent_ob</object>
-    <object>objects\EnemySlime_ob</object>
+    <object>objects\EnemySlimeSm_ob</object>
+    <object>objects\EnemySlimeMed_ob</object>
+    <object>objects\EnemySlimeLrg_ob</object>
+    <object>objects\EnemySlimeHuge_ob</object>
     <object>objects\Hitbox_ob</object>
   </objects>
   <rooms name="rooms">
