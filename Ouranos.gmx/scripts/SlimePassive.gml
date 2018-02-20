@@ -1,24 +1,41 @@
-if(place_meeting(x,y+1,solid)){
+if(place_meeting(x,y+EnemyCurVertSpeed,solid)){
     EnemyCanJump = true;
     EnemyTimer ++;
+    EnemyCurVertSpeed = 0;
+    image_alpha -= .01;
+    image_speed = .05;
+    if (EnemyCurHorSpeed > 0){
+        EnemyCurHorSpeed -= EnemySlide;
+    }
+    if (EnemyCurHorSpeed < 0){
+        EnemyCurHorSpeed += EnemySlide;
+    } 
 }
 else{
-            y += EnemyGrav;
+       EnemyCurVertSpeed += EnemyGrav;
+            
         }
+if(place_meeting(x + EnemyCurHorSpeed,y,solid)){
+    EnemyCurHorSpeed = 0;
+}
+
 
 if(EnemyCanJump == true){    
     if (EnemyTimer >= 120){
-            if((EnemyXStart - x) >  250){
+        image_alpha = 1;
+        image_speed = 0;
+        image_index = 0;
+            if((EnemyXStart - x) >  100){
                EnemyCurVertSpeed += - EnemyJumpForce;
-               x += 50; 
+               EnemyCurHorSpeed += EnemyHorForce; 
                EnemyCanJump = false;
                EnemyTimer = 0;
                y -= EnemyJumpForce;
                 
             }
-            else if ((EnemyXStart - x) <  -250){
+            else if ((EnemyXStart - x) <  -100){
                 EnemyCurVertSpeed += - EnemyJumpForce;
-                x -= 50;
+                EnemyCurHorSpeed -= EnemyHorForce;
                 EnemyCanJump = false;
                 EnemyTimer = 0;
                 y -= EnemyJumpForce;
@@ -28,21 +45,20 @@ if(EnemyCanJump == true){
                 EnemyCurVertSpeed += - EnemyJumpForce;
                 y -= EnemyJumpForce;
                 randomize();
-                EnemyMoveRight = 50;
-                EnemyMoveLeft = -50;
-                if(place_meeting(x+50,y,solid)){
+                EnemyMoveRight = EnemyHorForce;
+                EnemyMoveLeft = -EnemyHorForce;
+                if(place_meeting(x+EnemyHorForce,y,solid)){
                 EnemyMoveRight = 0;
                 }
-                if(place_meeting(x-50,y,solid)){
+                if(place_meeting(x-EnemyHorForce,y,solid)){
                 EnemyMoveLeft = 0;
                 }
                 
-                x += choose(EnemyMoveRight,EnemyMoveLeft);
+                EnemyCurHorSpeed += choose(EnemyMoveRight,EnemyMoveLeft);
                 EnemyCanJump = false;
                 EnemyTimer = 0;
                 
             }
         }
-        
-    
 }
+

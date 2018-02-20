@@ -8,3 +8,5 @@ else if (EnemyState = State.Dead){
     SlimeDead(); //Calls how to handle when the slime dies
 }
 
+y += EnemyCurVertSpeed;
+x += EnemyCurHorSpeed;
