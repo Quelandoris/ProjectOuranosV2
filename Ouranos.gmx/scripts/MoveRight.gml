@@ -10,10 +10,12 @@ if(!place_meeting(x+PlayerCurSpeed,y,solid)){
     x+=PlayerCurSpeed;
     //Set PlayerLastDirection
     PlayerLastDirection=Direction.Right;
+    PlayerFacing=Direction.Right;
 }
 //If a solid object is in the way, set speed to zero and direction to none.
 else{
     move_contact_solid(0,PlayerCurSpeed);
     PlayerCurSpeed=0;
     PlayerLastDirection=Direction.None;
+    PlayerFacing=Direction.Right;
 }

@@ -48,6 +48,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
+    <font>fonts\BodoniBig_ft</font>
   </fonts>
   <objects name="objects">
     <object>objects\Wall_ob</object>
@@ -64,6 +65,7 @@
     <object>objects\EnemySlimeLrg_ob</object>
     <object>objects\EnemySlimeHuge_ob</object>
     <object>objects\Hitbox_ob</object>
+    <object>objects\DmgText_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>
