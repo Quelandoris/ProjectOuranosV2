@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>EnemyParent_ob</parentName>
+  <parentName>EnemySlimeParent_ob</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -39,19 +39,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>EnemyState = State.Passive;
-EnemyCanJump = false; // Can the enemy currently jump? Reset on ground.
-EnemyGrav = 6; //Speed at which the enemy will fall;
-EnemyXStart = x; //Starting X for the enemy
-EnemyJumpForce = 25; //Controls jump height
-EnemyCurVertSpeed = 0; //How fast the enemy is currently moving vertically
-EnemyCurHorSpeed = 0;
-EnemyHorForce = 5;
-EnemySlide = .10;
-EnemyTimer = 0;
-EnemyMoveRight = 0
-EnemyMoveLeft = 00
-image_speed = .05;
+            <string>EnemyJumpForce = 3; //Controls jump height
 image_xscale =2
 image_yscale =2
 MaxHP=350;
@@ -59,62 +47,6 @@ HP=MaxHP;
 image_blend = c_purple;
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>SlimeMain</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

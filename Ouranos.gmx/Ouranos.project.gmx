@@ -45,6 +45,7 @@
       <script>scripts\SlimeAggro.gml</script>
     </scripts>
     <script>scripts\MeleeAttack.gml</script>
+    <script>scripts\PlayerDamaged.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
@@ -59,11 +60,14 @@
     <object>objects\Player_ob</object>
     <object>objects\Item_ob</object>
     <object>objects\Inventory_ob</object>
+    <objects name="Slimes">
+      <object>objects\EnemySlimeLrg_ob</object>
+      <object>objects\EnemySlimeHuge_ob</object>
+      <object>objects\EnemySlimeSm_ob</object>
+      <object>objects\EnemySlimeMed_ob</object>
+      <object>objects\EnemySlimeParent_ob</object>
+    </objects>
     <object>objects\Weapon_ob</object>
-    <object>objects\EnemySlimeSm_ob</object>
-    <object>objects\EnemySlimeMed_ob</object>
-    <object>objects\EnemySlimeLrg_ob</object>
-    <object>objects\EnemySlimeHuge_ob</object>
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
   </objects>
