@@ -106,6 +106,7 @@ else{
             new.ILvl=(AvgILvl+irandom_range(-1,3));
             if(new.ILvl<1) new.ILvl=1;
             else if(new.ILvl>MaxILvl) new.ILvl=MaxILvl;
+            new.ILvl=round(new.ILvl);
             //For every level, item gains AtkPower
             for(i=0; i<=new.ILvl ; i++){
                 new.AtkPower+=(irandom_range(1,3));
@@ -135,6 +136,7 @@ else{
             new.ILvl=(AvgILvl+irandom_range(-1,3));
             if(new.ILvl<1) new.ILvl=1;
             else if(new.ILvl>MaxILvl) new.ILvl=MaxILvl;
+            new.ILvl=round(new.ILvl);
             //For every level, item gains AtkPower
             for(i=0; i<=new.ILvl ; i++){
                 new.AtkPower+=(irandom_range(1,2));
@@ -164,6 +166,7 @@ else{
             new.ILvl=(AvgILvl+irandom_range(-1,3));
             if(new.ILvl<1) new.ILvl=1;
             else if(new.ILvl>MaxILvl) new.ILvl=MaxILvl;
+            new.ILvl=round(new.ILvl);
             for(i=0; i<=new.ILvl ; i++){
                 new.Defense+=(irandom_range(1,2));
             }
@@ -176,6 +179,7 @@ else{
             new.ILvl=(AvgILvl+irandom_range(-1,3));
             if(new.ILvl<1) new.ILvl=1;
             else if(new.ILvl>MaxILvl) new.ILvl=MaxILvl;
+            new.ILvl=round(new.ILvl);
             new.Cooldown=90;
             new.Healing=20;
             for(i=0; i<=new.ILvl ; i++){
