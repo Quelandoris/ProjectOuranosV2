@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>myText="";
 alpha=1;
-show_debug_message("I EXIST");
 </string>
           </argument>
         </arguments>

@@ -63,13 +63,22 @@ if(lifespan==1)instance_destroy();
 if(enemy!=noone){
     enemy.HP-=self.AtkPower;
 }*/
+/*
 if(place_meeting(x,y,EnemyParent_ob)){
     var thisone = place_meeting(x,y,EnemyParent_ob);
     //how damage is calculated CHANGE THIS VALUE TO SOMETHING LIKE "AtkPower-Enemy.Defense"
     var dmg = AtkPower;
-    
+    show_debug_message(string(array_length_1d(thisone)));
     thisone.HP-=dmg;
     var mytxt = instance_create(thisone.x,thisone.y-(thisone.sprite_height)-23,DmgText_ob);
+    mytxt.myText=string(dmg);
+}*/
+var coll = collision_rectangle(x,y,x+image_xscale,y-sprite_height,EnemyParent_ob,false,true);
+if(coll!=noone){
+    //how damage is calculated CHANGE THIS VALUE TO SOMETHING LIKE "AtkPower-Enemy.Defense"
+    var dmg = AtkPower;
+    coll.HP-=dmg;
+    var mytxt = instance_create(coll.x,coll.y-(coll.sprite_height)-23,DmgText_ob);
     mytxt.myText=string(dmg);
 }
 

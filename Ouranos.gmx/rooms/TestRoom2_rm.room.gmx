@@ -91,7 +91,6 @@
     <instance objName="Wall_ob" x="352" y="608" name="inst_3D88B018" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="368" y="608" name="inst_C3B340F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Player_ob" x="160" y="464" name="inst_CF3D71D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="EnemySlimeSm_ob" x="480" y="448" name="inst_0FAA03C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="EnemySlimeSm_ob" x="624" y="528" name="inst_C870341B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="0" y="656" name="inst_215F4D10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="0" y="672" name="inst_86B9BCFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -552,6 +551,7 @@
     <instance objName="EnemySlimeHuge_ob" x="2864" y="448" name="inst_CFA3A4AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="EnemySlimeHuge_ob" x="3168" y="416" name="inst_A79AA784" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="EnemySlimeHuge_ob" x="352" y="384" name="inst_4B97F52A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="EnemyParent_ob" x="48" y="624" name="inst_B95AD348" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
