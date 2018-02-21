@@ -29,6 +29,7 @@
 PlayerCurSpeed=0;//Speed when moving left-right
 enum Direction{Left,Right,None};
 PlayerLastDirection=Direction.None;
+PlayerFacing=Direction.Right;
 PlayerSpeedGain=0.2; //Rate at which the layer gains speed per frame; Player speed with ramp up.
 PlayerSpeedLoss=0.3; //Rate at which player loses speed when they stop moving.
 PlayerSpeedCap=3; //Max speed player can move at
@@ -70,6 +71,29 @@ randomize();
             <string>///Views control
 //cam = instance_create(x,y,Camerapoint_ob);
 //view_object[0]=cam;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Play Values
+HP=100;
+MaxHP=HP;
 </string>
           </argument>
         </arguments>
@@ -184,6 +208,30 @@ if(debugMode){
     if(keyboard_check_pressed(ord("I"))){
         ItemGenerationScript(6,10,true);
     }
+    if(keyboard_check_pressed(ord("O"))){
+        var totlevel=0;
+        var totitems=0;
+        var avglevel=0;
+        for(i=0;i&lt;=3;i++){
+            if(Inv.Inv[i]!=""){
+                totitems++;
+                totlevel+=Inv.Inv[i].ILvl;
+                show_debug_message("Totitems: " + string(totitems) + ", totlevel: " + string(totlevel));
+            }
+        }
+        if(totitems&lt;=0) totitems=1;
+        avglevel=totlevel/totitems;
+        show_debug_message("avglevel: " + string(avglevel));
+        ItemGenerationScript(avglevel, 6, false);
+    }
+    //- is 189
+    if(keyboard_check_pressed(189)){
+        HP-=5;
+    }
+    //= is 187
+    if(keyboard_check_pressed(187)){
+        HP+=5;
+    }
 }
 </string>
           </argument>
@@ -210,6 +258,42 @@ if(distance_to_object(Item_ob)&lt;10){
     var nearest = instance_nearest(x,y,Item_ob);
     nearest.PlayerNear=true;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw HP Bar
+
+//HP bar is draw on bottom of screen, based on port on screen values
+//Two pieces, meets in center
+//right side
+draw_healthbar(view_wport[0]/2,view_hport[0]-50,view_wport[0]-20,view_hport[0]-20,(HP/MaxHP)*100,c_black,c_green,c_lime,0,true,false);
+//left side
+draw_healthbar(view_wport[0]/2,view_hport[0]-50,20,view_hport[0]-20,(HP/MaxHP)*100,c_black,c_green,c_lime,0,true,false);
+
+//Draw text for %HP remaining
+draw_set_font(BodoniBig_ft);
+draw_set_colour(c_black);
+draw_set_halign(fa_center);
+draw_text(view_wport[0]/2,view_hport[0]-50,string(round((HP/MaxHP)*100)) + "%");
 </string>
           </argument>
         </arguments>

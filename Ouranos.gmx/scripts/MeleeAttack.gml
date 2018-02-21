@@ -12,10 +12,20 @@ var knockback=argument3;
 var atkBurn=argument4;
 
 //create a hitbox
-var Hitbox = instance_create(x+(sprite_width/2)+1,y,Hitbox_ob);
+if(PlayerFacing==Direction.Right){
+    var Hitbox = instance_create(x+(sprite_width/2)+1,y,Hitbox_ob);
+}
+else if(PlayerFacing==Direction.Left){
+    var Hitbox = instance_create(x-(sprite_width/2)-1,y,Hitbox_ob);
+}
 //Assign basic values
 Hitbox.AtkPower = atkPower;
-Hitbox.image_xscale=atkLength;
+if(PlayerFacing==Direction.Right){
+    Hitbox.image_xscale=atkLength;
+}
+else if(PlayerFacing==Direction.Left){
+    Hitbox.image_xscale=-atkLength;
+}
 //assign Passive values
 Hitbox.Sunder=sunder;
 Hitbox.Knockback=knockback;
