@@ -69,9 +69,35 @@ if(c){
             item.y=0;
         }
         //armor
-        //else if(item.object_index==Armor_ob){
+        else if(item.object_index==Armor_ob){
+            //Equip to chest
+            //if player already has an item equipped, make that item reappear near the player
+            if(Inv.Inv[2]!=""){
+                Inv.Inv[2].visible=true;
+                Inv.Inv[2].x=x+(irandom_range(-5,5));
+                Inv.Inv[2].y=y;
+            }
+            Inv.Inv[2]=item;
+            //Hide object Object still exists, but isn't a physical world object that can be interacted with
+            item.visible=false;
+            item.x=0;
+            item.y=0;
+        }
         //trinket
-        //else if(item.object_index==Trinket_ob){
+        else if(item.object_index==Trinket_ob){
+            //Equip to hand
+            //if player already has an item equipped, make that item reappear near the player
+            if(Inv.Inv[3]!=""){
+                Inv.Inv[3].visible=true;
+                Inv.Inv[3].x=x+(irandom_range(-5,5));
+                Inv.Inv[3].y=y;
+            }
+            Inv.Inv[3]=item;
+            //Hide object Object still exists, but isn't a physical world object that can be interacted with
+            item.visible=false;
+            item.x=0;
+            item.y=0;
+        }
         
     }
 }

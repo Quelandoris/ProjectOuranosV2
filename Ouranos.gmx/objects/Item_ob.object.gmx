@@ -131,6 +131,13 @@ if(PlayerNear){
             }
         }
     }
+    else if(object_index==Armor_ob){
+        
+    }
+    else if(object_get_parent(object_index)==Weapon_ob){
+        //check for health potion
+        if(
+    }
 }
 </string>
           </argument>

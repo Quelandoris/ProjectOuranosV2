@@ -16,7 +16,7 @@ IsBoss=argument2; //If a boss is the one dropping an item, it should always gene
 //If the item is being dropped by a boss, generate the item at its max level possible.
 if(IsBoss){
     //Randomly pick what kind of item to drop. This must equal the number of item types in game minus 1!
-    switch(irandom(1)){
+    switch(irandom(3)){
         case 0:
             //Spawn a sword
             new = instance_create(x,y,Sword_ob);
@@ -71,6 +71,27 @@ if(IsBoss){
                 }
         }
         break;
+        case 2:
+            //spawn armor
+            new = instance_create(x,y,Armor_ob);
+            new.ILvl=MaxILvl;
+            for(i=0; i<=new.ILvl ; i++){
+                new.Defense+=(irandom_range(1,2));
+            }
+            //Passive effects
+            //TD
+        break;
+        case 3:
+            //spawn trinket: Health Potion
+            new = instance_create(x,y,HealthPotion_ob);
+            new.ILvl=MaxILvl;
+            Cooldown=90;
+            Healing=40;
+            for(i=0; i<=new.ILvl ; i++){
+                var ran = irandom(1)
+                if(ran==0) new.Cooldown-=(irandom_range(1,2));
+                else if (ran==1) new.Cooldown+=(irandom_range(1,3));
+            }
         default:
             show_debug_message("Error in ItemGenerationScript: Fallthrough to default in IsBoss Switch");
         break;
