@@ -16,6 +16,7 @@
     <sprite>sprites\KeyboardZ_sp_HighRez</sprite>
     <sprite>sprites\WallTest_sp</sprite>
     <sprite>sprites\EnemySlime_sp</sprite>
+    <sprite>sprites\EnemySlimeDead_sp</sprite>
     <sprite>sprites\EnemyTest_sp</sprite>
     <sprite>sprites\SwordTest_sp</sprite>
     <sprite>sprites\BowTest</sprite>

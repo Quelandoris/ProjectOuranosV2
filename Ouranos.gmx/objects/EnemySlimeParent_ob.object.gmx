@@ -57,6 +57,7 @@ image_yscale =.5
 MaxHP=1;
 HP=MaxHP;
 image_blend = c_green;
+Target = 0;
 
 
 

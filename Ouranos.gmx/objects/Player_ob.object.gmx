@@ -95,6 +95,7 @@ randomize();
 HP=100;
 MaxHP=HP;
 IFrames = room_speed;
+
 </string>
           </argument>
         </arguments>

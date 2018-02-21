@@ -80,6 +80,10 @@ if(coll!=noone){
     coll.HP-=dmg;
     var mytxt = instance_create(coll.x,coll.y-(coll.sprite_height)-23,DmgText_ob);
     mytxt.myText=string(dmg);
+    coll.Target = instance_nearest(x,y,Player_ob);
+    if(coll.EnemyState == State.Passive){
+    coll.EnemyState = State.Aggro;
+    }
 }
 
 lifespan++;
