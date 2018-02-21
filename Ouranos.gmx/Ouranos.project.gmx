@@ -19,6 +19,9 @@
     <sprite>sprites\EnemySlime_sp</sprite>
     <sprite>sprites\EnemySlimeDead_sp</sprite>
     <sprite>sprites\EnemyTest_sp</sprite>
+    <sprite>sprites\Sm</sprite>
+    <sprite>sprites\Med</sprite>
+    <sprite>sprites\Huge</sprite>
     <sprite>sprites\SwordTest_sp</sprite>
     <sprite>sprites\BowTest</sprite>
     <sprites name="Inventory">
@@ -33,7 +36,10 @@
     <sprite>sprites\HealthPotionTest_sp</sprite>
     <sprite>sprites\rangedHitbox_sp</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Win</background>
+    <background>background\Start</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\ItemGenerationScript.gml</script>
@@ -87,10 +93,13 @@
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
     <object>objects\RangedHitbox_ob</object>
+    <object>objects\Restart</object>
+    <object>objects\Menu_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
     <room>rooms\TestRoom2_rm</room>
+    <room>rooms\RoomEnd</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

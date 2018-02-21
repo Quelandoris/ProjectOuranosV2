@@ -60,24 +60,24 @@ Timer = room_speed * 60;
 }    
 if(Timer &gt;= room_speed * 60){   
         if(Spawned &lt; MaxSmSpawn){
-            var Sm = instance_create(x,y, EnemySlimeSm_ob);
-            Sm.Spawner = id;
+            var Small = instance_create(x,y, EnemySlimeSm_ob);
+            Small.Spawner = id;
             Spawned ++;
             
         }
         if(Spawned &lt; MaxMedSpawn){
-            var Med = instance_create(x,y, EnemySlimeMed_ob);
-            Med.Spawer = id;
+            var Md = instance_create(x,y, EnemySlimeMed_ob);
+            Md.Spawner = id;
             Spawned ++;
         }
         if(Spawned &lt; MaxLrgSpawn){     
             var Lrg = instance_create(x,y, EnemySlimeLrg_ob);
-            Lrg.Spawer = id;
+            Lrg.Spawner = id;
             Spawned ++;
         }
         if(Spawned &lt; MaxHugeSpawn){            
-            var Huge = instance_create(x,y, EnemySlimeHuge_ob);
-            Huge.Spawer = id;
+            var Hg = instance_create(x,y, EnemySlimeHuge_ob);
+            Hg.Spawner = id;
             Spawned ++;
         }
         Timer = 0;
