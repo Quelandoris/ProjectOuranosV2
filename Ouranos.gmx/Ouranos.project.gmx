@@ -11,6 +11,7 @@
     <sprite>sprites\KeyboardX_sp</sprite>
     <sprite>sprites\InventoryBox_sp</sprite>
     <sprite>sprites\PlayerTest_sp</sprite>
+    <sprite>sprites\PlayerDead_sp</sprite>
     <sprite>sprites\KeyboardC_sp_HighRez</sprite>
     <sprite>sprites\KeyboardX_sp_HighRez</sprite>
     <sprite>sprites\KeyboardZ_sp_HighRez</sprite>
@@ -30,6 +31,10 @@
     <sprite>sprites\hitbox_sp</sprite>
     <sprite>sprites\ArmorTest_sp</sprite>
     <sprite>sprites\HealthPotionTest_sp</sprite>
+    <sprite>sprites\SmSlimeSpawner_sp</sprite>
+    <sprite>sprites\MedSlimeSpawner_sp</sprite>
+    <sprite>sprites\LrgSlimeSpawner_sp</sprite>
+    <sprite>sprites\HugeSlimeSpawner_sp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -49,6 +54,7 @@
     </scripts>
     <script>scripts\MeleeAttack.gml</script>
     <script>scripts\PlayerDamaged.gml</script>
+    <script>scripts\PlayerDeath.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Bodoni_ft</font>
@@ -63,6 +69,7 @@
     <object>objects\Armor_ob</object>
     <object>objects\HealthPotion_ob</object>
     <object>objects\Player_ob</object>
+    <object>objects\DeadPlayer_ob</object>
     <object>objects\Item_ob</object>
     <object>objects\Inventory_ob</object>
     <objects name="Slimes">
@@ -71,14 +78,21 @@
       <object>objects\EnemySlimeSm_ob</object>
       <object>objects\EnemySlimeMed_ob</object>
       <object>objects\EnemySlimeParent_ob</object>
+      <object>objects\SmSlimeSpawner_ob</object>
+      <object>objects\MedSlimeSpawner_ob</object>
+      <object>objects\LrgSlimeSpawner_ob</object>
+      <object>objects\HugeSlimeSpawner_ob</object>
+      <object>objects\SlimeSpawnerParent_ob</object>
     </objects>
     <object>objects\Weapon_ob</object>
     <object>objects\Trinket_ob</object>
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
     <object>objects\RangedHitBox_ob</object>
+    <object>objects\Menu_ob</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\TestRoom2_rm</room>
   </rooms>
   <help>

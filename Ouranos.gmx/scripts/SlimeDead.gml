@@ -28,6 +28,7 @@ if(image_alpha <= 0.1){
     if(totitems<=0) totitems=1;
     avglevel=totlevel/totitems;
     ItemGenerationScript(avglevel,MaxLevel, false);
+    Spawner.Spawned --;
     instance_destroy();
 }
 
