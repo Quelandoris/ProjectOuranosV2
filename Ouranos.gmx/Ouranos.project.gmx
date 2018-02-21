@@ -27,6 +27,8 @@
     </sprites>
     <sprite>sprites\TestDummy_sp</sprite>
     <sprite>sprites\hitbox_sp</sprite>
+    <sprite>sprites\ArmorTest_sp</sprite>
+    <sprite>sprites\HealthPotionTest_sp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -56,16 +58,20 @@
     <object>objects\TestDummy_ob</object>
     <object>objects\Bow_ob</object>
     <object>objects\Sword_ob</object>
+    <object>objects\Armor_ob</object>
+    <object>objects\HealthPotion_ob</object>
     <object>objects\Player_ob</object>
     <object>objects\Item_ob</object>
     <object>objects\Inventory_ob</object>
     <object>objects\Weapon_ob</object>
+    <object>objects\Trinket_ob</object>
     <object>objects\EnemySlimeSm_ob</object>
     <object>objects\EnemySlimeMed_ob</object>
     <object>objects\EnemySlimeLrg_ob</object>
     <object>objects\EnemySlimeHuge_ob</object>
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
+    <object>objects\RangedHitBox_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>

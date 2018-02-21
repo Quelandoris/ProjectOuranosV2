@@ -131,6 +131,18 @@ if(PlayerNear){
             }
         }
     }
+    else if(object_index==Armor_ob){
+        draw_text(x,y-120,"Armor +" + string(ILvl));
+        draw_text(x,y-110,"Defense: " + string(Defense));
+    }
+    else if(object_get_parent(object_index)==Trinket_ob){
+        //check for health potion
+        if(object_index==HealthPotion_ob){
+            draw_text(x,y-120,"Health Potion +" + string(ILvl));
+            draw_text(x,y-110,"Healing: " + string(Healing));
+            draw_text(x,y-100,"Cooldown: " + string(Cooldown) + " Secs");
+        }
+    }
 }
 </string>
           </argument>
