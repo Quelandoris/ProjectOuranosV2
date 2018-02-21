@@ -35,6 +35,10 @@ if(keyboard_check_pressed(ord("C"))){
 if(keyboard_check_pressed(ord("Z"))){
     z=true;
 }
+//trinket = X
+if(keyboard_check_pressed(ord("X"))){
+    xb=true;
+}
 
 //if these are true, execute scripts for movement (This will be important for when we have multiple input methods, especially the mobile controls)
 if(left){
@@ -123,7 +127,9 @@ if(z){
 
 //X uses trinket
 if(xb){
-    if(Inv.Inv[3]==HealthPotion_ob){
+    if(Inv.Inv[3].object_index==HealthPotion_ob && TrinketTimer>=(Inv.Inv[3].Cooldown*room_speed)){
         //restore HP, go on cooldown
+        TrinketTimer=0;
+        HP+=Inv.Inv[3].Healing;
     }
 }
