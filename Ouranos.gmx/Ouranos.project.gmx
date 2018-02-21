@@ -30,6 +30,7 @@
     <sprite>sprites\hitbox_sp</sprite>
     <sprite>sprites\ArmorTest_sp</sprite>
     <sprite>sprites\HealthPotionTest_sp</sprite>
+    <sprite>sprites\rangedHitbox_sp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -48,6 +49,7 @@
       <script>scripts\SlimeAggro.gml</script>
     </scripts>
     <script>scripts\MeleeAttack.gml</script>
+    <script>scripts\RangedAttack.gml</script>
     <script>scripts\PlayerDamaged.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -76,7 +78,7 @@
     <object>objects\Trinket_ob</object>
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
-    <object>objects\RangedHitBox_ob</object>
+    <object>objects\RangedHitbox_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>

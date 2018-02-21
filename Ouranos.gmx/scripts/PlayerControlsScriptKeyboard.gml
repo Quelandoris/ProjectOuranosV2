@@ -35,6 +35,10 @@ if(keyboard_check_pressed(ord("C"))){
 if(keyboard_check_pressed(ord("Z"))){
     z=true;
 }
+//trinket = X
+if(keyboard_check_pressed(ord("X"))){
+    xb=true;
+}
 
 //if these are true, execute scripts for movement (This will be important for when we have multiple input methods, especially the mobile controls)
 if(left){
@@ -66,6 +70,7 @@ if(c){
             Inv.Inv[0]=item;
             //Hide object Object still exists, but isn't a physical world object that can be interacted with
             item.visible=false;
+            item.persistent=true;
             item.x=0;
             item.y=0;
         }
@@ -81,6 +86,7 @@ if(c){
             Inv.Inv[2]=item;
             //Hide object Object still exists, but isn't a physical world object that can be interacted with
             item.visible=false;
+            item.persistent=true;
             item.x=0;
             item.y=0;
         }
@@ -96,6 +102,7 @@ if(c){
             Inv.Inv[3]=item;
             //Hide object Object still exists, but isn't a physical world object that can be interacted with
             item.visible=false;
+            item.persistent=true;
             item.x=0;
             item.y=0;
         }
@@ -113,11 +120,16 @@ if(z){
         MeleeAttack(Inv.Inv[0].AtkPower,Inv.Inv[0].AtkLength,Inv.Inv[0].Sunder,Inv.Inv[0].Knockback,Inv.Inv[0].AtkBurn);
     }
     //else if ranged, launch range attack
+    else if(Inv.Inv[0].Ranged==true){
+        RangedAttack(Inv.Inv[0].AtkPower,Inv.Inv[0].Sunder,Inv.Inv[0].Knockback,Inv.Inv[0].AtkBurn);
+    }
 }
 
 //X uses trinket
 if(xb){
-    if(Inv.Inv[3]==HealthPotion_ob){
+    if(Inv.Inv[3].object_index==HealthPotion_ob && TrinketTimer>=(Inv.Inv[3].Cooldown*room_speed)){
         //restore HP, go on cooldown
+        TrinketTimer=0;
+        HP+=Inv.Inv[3].Healing;
     }
 }
