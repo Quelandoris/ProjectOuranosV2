@@ -71,6 +71,7 @@
     <object>objects\EnemySlimeHuge_ob</object>
     <object>objects\Hitbox_ob</object>
     <object>objects\DmgText_ob</object>
+    <object>objects\RangedHitBox_ob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestRoom2_rm</room>

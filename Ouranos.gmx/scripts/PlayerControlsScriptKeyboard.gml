@@ -9,6 +9,7 @@ var left=false;
 var right=false;
 var up=false;
 var c=false;
+var xb=false; //fucking x is taken
 var z=false;
 
 //Check for input
@@ -84,7 +85,7 @@ if(c){
             item.y=0;
         }
         //trinket
-        else if(item.object_index==Trinket_ob){
+        else if(object_get_parent(item.object_index)==Trinket_ob){
             //Equip to hand
             //if player already has an item equipped, make that item reappear near the player
             if(Inv.Inv[3]!=""){
@@ -112,4 +113,11 @@ if(z){
         MeleeAttack(Inv.Inv[0].AtkPower,Inv.Inv[0].AtkLength,Inv.Inv[0].Sunder,Inv.Inv[0].Knockback,Inv.Inv[0].AtkBurn);
     }
     //else if ranged, launch range attack
+}
+
+//X uses trinket
+if(xb){
+    if(Inv.Inv[3]==HealthPotion_ob){
+        //restore HP, go on cooldown
+    }
 }
