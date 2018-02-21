@@ -7,7 +7,7 @@
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <colour>16777088</colour>
   <showcolour>-1</showcolour>
   <code></code>
@@ -63,7 +63,6 @@
     <instance objName="Wall_ob" x="144" y="640" name="inst_0A46A769" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="160" y="640" name="inst_797ED32F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="176" y="640" name="inst_BB965A79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Player_ob" x="160" y="464" name="inst_CF3D71D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="0" y="656" name="inst_215F4D10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="0" y="672" name="inst_86B9BCFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="0" y="688" name="inst_261DCA7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -516,8 +515,10 @@
     <instance objName="Wall_ob" x="4976" y="608" name="inst_92C2220C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="4976" y="624" name="inst_149B439F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wall_ob" x="4976" y="640" name="inst_0325FED4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="EnemySlimeSm_ob" x="464" y="576" name="inst_2E90E5FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="EnemySlimeMed_ob" x="784" y="560" name="inst_7599E9B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="SmSlimeSpawner_ob" x="512" y="608" name="inst_63B74D84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MedSlimeSpawner_ob" x="1200" y="608" name="inst_02BFFEBB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="LrgSlimeSpawner_ob" x="2448" y="608" name="inst_1871B5E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="HugeSlimeSpawner_ob" x="3408" y="608" name="inst_54126C8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
